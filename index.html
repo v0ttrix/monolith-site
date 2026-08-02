@@ -63,6 +63,9 @@
 <main id="main-content">
 <!-- Hero Section -->
 <section class="relative h-[85vh] w-full flex items-center bg-primary-container overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Modern architecture building" class="w-full h-full object-cover opacity-30 mix-blend-overlay" src="images/hero-building.jpg"/>
+</div>
 <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
 <span class="font-label-caps text-label-caps text-secondary-container tracking-[0.3em] uppercase mb-6 block reveal-element active">The Modern Catalyst</span>
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white max-w-4xl leading-none reveal-element active" style="transition-delay: 200ms;">
@@ -110,17 +113,13 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal-element">
 <div class="space-y-6">
-<div class="relative bg-primary-container aspect-[4/3] flex items-center justify-center">
-<div class="text-center p-8">
-<span class="material-symbols-outlined text-[64px] text-white/40 mb-4" aria-hidden="true">apartment</span>
-<p class="font-label-caps text-[10px] tracking-widest uppercase text-white/60">The Foundation (Before)</p>
+<div class="relative bg-primary-container aspect-[4/3] flex items-center justify-center overflow-hidden">
+<img alt="Building before renovation" class="w-full h-full object-cover opacity-60 grayscale" src="images/before-renovation.jpg"/>
+<div class="absolute top-4 left-4 bg-on-background/80 backdrop-blur-sm px-4 py-2 font-label-caps text-[10px] tracking-widest uppercase text-white">The Foundation (Before)</div>
 </div>
-</div>
-<div class="relative bg-secondary aspect-[4/3] flex items-center justify-center">
-<div class="text-center p-8">
-<span class="material-symbols-outlined text-[64px] text-on-secondary/60 mb-4" aria-hidden="true">domain</span>
-<p class="font-label-caps text-[10px] tracking-widest uppercase text-on-secondary">The Vision Realized (After)</p>
-</div>
+<div class="relative bg-secondary aspect-[4/3] flex items-center justify-center overflow-hidden">
+<img alt="Building after renovation" class="w-full h-full object-cover" src="images/after-renovation.jpg"/>
+<div class="absolute top-4 left-4 bg-secondary px-4 py-2 font-label-caps text-[10px] tracking-widest uppercase text-on-secondary">The Vision Realized (After)</div>
 </div>
 </div>
 <div class="md:pl-12">
