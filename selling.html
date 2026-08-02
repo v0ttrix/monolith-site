@@ -77,37 +77,40 @@
 <h2 class="font-headline-md text-headline-md text-primary mb-4">Sell Your Property</h2>
 <p class="font-body-md text-on-surface-variant mb-8">Fill out the form below and our team will review your property and get back to you within 24 hours.</p>
 
-<form id="sellingForm" class="space-y-6" novalidate>
+<form id="sellingForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+<input type="hidden" name="access_key" value="ff183841-0e7c-4f48-a7bc-9f4c0070b281"/>
+<input type="hidden" name="subject" value="New Property Submission — Hayat Holdings"/>
+<input type="hidden" name="from_name" value="Hayat Holdings Website"/>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label for="sellerFirstName" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">First Name</label>
-<input id="sellerFirstName" type="text" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="John"/>
+<input id="sellerFirstName" type="text" name="First Name" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="John"/>
 </div>
 <div>
 <label for="sellerLastName" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Last Name</label>
-<input id="sellerLastName" type="text" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="Doe"/>
+<input id="sellerLastName" type="text" name="Last Name" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="Doe"/>
 </div>
 </div>
 
 <div>
 <label for="sellerPhone" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Phone Number</label>
-<input id="sellerPhone" type="tel" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="+1 (555) 000-0000"/>
+<input id="sellerPhone" type="tel" name="Phone" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="+1 (555) 000-0000"/>
 </div>
 
 <div>
 <label for="sellerEmail" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Email</label>
-<input id="sellerEmail" type="email" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="you@example.com"/>
+<input id="sellerEmail" type="email" name="Email" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="you@example.com"/>
 </div>
 
 <div>
 <label for="propertyAddress" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Property Address</label>
-<input id="propertyAddress" type="text" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="123 Main Street, City, State, ZIP"/>
+<input id="propertyAddress" type="text" name="Property Address" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="123 Main Street, City, State, ZIP"/>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label for="propertyType" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Property Type</label>
-<select id="propertyType" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors">
+<select id="propertyType" name="Property Type" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors">
 <option value="">Select type</option>
 <option value="single-family">Single Family Home</option>
 <option value="condo">Condo / Apartment</option>
@@ -119,13 +122,13 @@
 </div>
 <div>
 <label for="askingPrice" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Asking Price</label>
-<input id="askingPrice" type="text" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="$500,000"/>
+<input id="askingPrice" type="text" name="Asking Price" required class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors" placeholder="$500,000"/>
 </div>
 </div>
 
 <div>
 <label for="propertyDetails" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Additional Details (Optional)</label>
-<textarea id="propertyDetails" rows="4" class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Bedrooms, bathrooms, square footage, special features, reason for selling..."></textarea>
+<textarea id="propertyDetails" rows="4" name="Additional Details" class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Bedrooms, bathrooms, square footage, special features, reason for selling..."></textarea>
 </div>
 
 <div>
@@ -286,13 +289,38 @@ menuBtn.addEventListener('click', () => {
 
 document.getElementById('sellingForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const name = document.getElementById('sellerFirstName').value + ' ' + document.getElementById('sellerLastName').value;
-    const address = document.getElementById('propertyAddress').value;
-    const fileCount = document.getElementById('propertyImages').files.length;
-    const photoMsg = fileCount > 0 ? ` with ${fileCount} photo${fileCount > 1 ? 's' : ''}` : '';
-    alert(`Thank you, ${name}! Your property at "${address}"${photoMsg} has been submitted. Our team will contact you within 24 hours.`);
-    this.reset();
-    document.getElementById('imagePreview').innerHTML = '';
+    const form = this;
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            btn.textContent = '✓ Submitted!';
+            btn.classList.remove('bg-secondary');
+            btn.classList.add('bg-primary');
+            const name = form.querySelector('#sellerFirstName').value;
+            alert(`Thank you, ${name}! Your property has been submitted. We'll contact you within 24 hours.`);
+            form.reset();
+            document.getElementById('imagePreview').innerHTML = '';
+        } else {
+            alert('Something went wrong. Please try again.');
+        }
+        btn.textContent = 'Submit Property';
+        btn.disabled = false;
+        btn.classList.add('bg-secondary');
+        btn.classList.remove('bg-primary');
+    })
+    .catch(() => {
+        alert('Something went wrong. Please try again.');
+        btn.textContent = 'Submit Property';
+        btn.disabled = false;
+    });
 });
 
 // Image upload handling
