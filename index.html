@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MONOLITH | The Modern Catalyst</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1c1b1a",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#79301b",
+                    "background": "#fdf9f6",
+                    "tertiary-fixed-dim": "#d7c3b1",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#c8c6c6",
+                    "surface-variant": "#e5e2df",
+                    "on-surface-variant": "#444748",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#ebe7e4",
+                    "tertiary-container": "#372b1e",
+                    "secondary-fixed": "#ffdbd1",
+                    "surface-dim": "#ddd9d6",
+                    "tertiary-fixed": "#f4dfcc",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f1edea",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f4f0ed",
+                    "surface-container-low": "#f7f3f0",
+                    "primary-container": "#2d2d2d",
+                    "on-secondary-fixed": "#3b0900",
+                    "outline": "#747878",
+                    "outline-variant": "#c4c7c7",
+                    "primary-fixed-dim": "#c8c6c6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1b1a",
+                    "secondary": "#974730",
+                    "on-tertiary-container": "#a49181",
+                    "surface-bright": "#fdf9f6",
+                    "secondary-container": "#fe987c",
+                    "on-primary-fixed": "#1b1c1c",
+                    "on-secondary-container": "#772e1a",
+                    "primary": "#181919",
+                    "surface-container-highest": "#e5e2df",
+                    "on-tertiary-fixed": "#24190e",
+                    "surface": "#fdf9f6",
+                    "on-primary-container": "#959494",
+                    "inverse-surface": "#31302f",
+                    "secondary-fixed-dim": "#ffb5a1",
+                    "on-primary-fixed-variant": "#474747",
+                    "primary-fixed": "#e4e2e1",
+                    "tertiary": "#21170b",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#5f5e5e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Bodoni Moda"],
+                    "display-lg-mobile": ["Bodoni Moda"],
+                    "label-caps": ["Inter"],
+                    "headline-sm": ["Bodoni Moda"],
+                    "display-lg": ["Bodoni Moda"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px currentColor;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-on-secondary overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="w-full top-0 left-0 sticky z-50 bg-background/95 backdrop-blur-md border-b border-on-background/10">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-on-surface">MONOLITH</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors cursor-pointer" href="portfolio.html">Portfolio</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors cursor-pointer" href="acquisitions.html">Acquisitions</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors cursor-pointer" href="renovation.html">Renovation</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors cursor-pointer" href="philosophy.html">Philosophy</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors cursor-pointer" href="book.html">Book</a>
+</div>
+<a href="book.html" class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:opacity-80 transition-all active:scale-95 cursor-pointer">
+            Book Now
+        </a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[85vh] w-full flex items-center bg-primary-container overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Monumental Architecture" class="w-full h-full object-cover opacity-40 mix-blend-overlay grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQSEi7g5SL61O2SeE9Plly20fkfmdolwlRtBJCEjdDrZQHXQGz2nTHPzS3mQzXWmDkZzJXeqVjvYXLLU6KCQ29I0sL8OTTtdBNCQWRYovQ2fgmV-77yMLqK_fShHLnHbTAGxJc4rli7fv_XUNJrG3mmZGteh4At9xBI-lvCAvQuG2GTfCj8WJD04LCfAT2GzqjoQQFdrHGxbwTaJw_XpoQ3t2G_j-yKeV6ddWs2vf8ytBl-4jaqFQaJQ"/>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<span class="font-label-caps text-label-caps text-secondary-container tracking-[0.3em] uppercase mb-6 block reveal-element active">The Modern Catalyst</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white max-w-4xl leading-none reveal-element active" style="transition-delay: 200ms;">
+            We don't just find spaces.<br/>We discover their <span class="text-secondary-container italic">legacy.</span>
+</h1>
+<div class="mt-12 reveal-element active" style="transition-delay: 400ms;">
+<a href="book.html" class="inline-block bg-secondary text-on-secondary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary-container hover:text-on-secondary-container transition-all">
+                Book a Consultation
+            </a>
+</div>
+</div>
+</section>
+<!-- Vision Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 reveal-element">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Your partner in structural transformation.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                Monolith Holding Group operates at the intersection of strategic acquisition and visionary architecture. We identify hidden potential in urban landscapes and catalyze change through thoughtful intervention.
+            </p>
+<div class="flex items-center gap-4 text-secondary cursor-pointer group">
+<span class="font-label-caps text-label-caps uppercase tracking-widest border-b border-transparent group-hover:border-secondary transition-all">Our Methodology</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 bg-surface-container p-12 reveal-element" style="transition-delay: 200ms;">
+<p class="font-body-md text-body-md italic text-primary leading-relaxed">
+                "Our approach is professional yet deeply human. We see beyond the brick and mortar to the lives that will be lived within these walls. Every acquisition is a promise of renewal."
+            </p>
+<div class="mt-8 flex items-center gap-4">
+<div class="w-12 h-px bg-secondary"></div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">The Monolith Philosophy</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Acquisition Spotlight: Before & After -->
+<section class="py-24 bg-on-background text-background overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16 flex flex-col md:flex-row justify-between items-baseline gap-4 reveal-element">
+<h2 class="font-headline-md text-headline-md text-surface-container-lowest">Catalyzing Potential</h2>
+<p class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed">Spotlight: The Heritage Acquisition</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal-element">
+<!-- Comparison Container -->
+<div class="space-y-6">
+<div class="relative group overflow-hidden bg-primary-container">
+<img alt="Before" class="w-full aspect-[4/3] object-cover opacity-60 grayscale group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQSEi7g5SL61O2SeE9Plly20fkfmdolwlRtBJCEjdDrZQHXQGz2nTHPzS3mQzXWmDkZzJXeqVjvYXLLU6KCQ29I0sL8OTTtdBNCQWRYovQ2fgmV-77yMLqK_fShHLnHbTAGxJc4rli7fv_XUNJrG3mmZGteh4At9xBI-lvCAvQuG2GTfCj8WJD04LCfAT2GzqjoQQFdrHGxbwTaJw_XpoQ3t2G_j-yKeV6ddWs2vf8ytBl-4jaqFQaJQ"/>
+<div class="absolute top-4 left-4 bg-on-background/80 backdrop-blur-sm px-4 py-2 font-label-caps text-[10px] tracking-widest uppercase">The Foundation (Before)</div>
+</div>
+<div class="relative group overflow-hidden bg-secondary">
+<img alt="After" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvm4oKBvLFFvrVzKGDhmX0QC72fAu-g8qVPgAdIRnnRI5UMxpNektgHftO00Z59pbmZLEqSu2xMYCRcuEckPp3XYTGI3_n2sAZYg4wvFk7UkRW_wwPzqwJ2aahbY_KS7Ki73V42ypsSMheKp7vfKHyn_1auLeYF7dBZoleTuPqjg8IZRPvKJnmEAdk0Cn-HxaxbSD31dIZHfpSNIwSmJz-HlTgNmPPTe_23cW4NY9FyYbQUfmdO_bi9A"/>
+<div class="absolute top-4 left-4 bg-secondary px-4 py-2 font-label-caps text-[10px] tracking-widest uppercase text-on-secondary">The Vision Realized (After)</div>
+</div>
+</div>
+<!-- Details -->
+<div class="md:pl-12">
+<div class="space-y-8">
+<div>
+<span class="font-headline-sm text-secondary-fixed mb-2 block italic">Strategic Acquisition</span>
+<h3 class="font-headline-md text-headline-sm leading-tight">The Warehouse Lofts, East District</h3>
+<p class="font-body-md text-surface-variant mt-4 opacity-80">
+                            Acquired as a decommissioned industrial site, we recognized the inherent value in its 20-foot ceilings and raw structural integrity. Through professional stewardship, it was reimagined as a premium residential anchor for the neighborhood.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-8 border-t border-surface-variant/20 pt-8">
+<div>
+<p class="font-label-caps text-[10px] text-secondary-fixed uppercase mb-2">Yield Increase</p>
+<p class="font-headline-sm text-headline-sm text-white">+142%</p>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-secondary-fixed uppercase mb-2">Community Impact</p>
+<p class="font-headline-sm text-headline-sm text-white">High</p>
+</div>
+</div>
+<button class="w-full md:w-auto border border-secondary text-secondary px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all">
+                        Request Performance Data
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Expertise Areas -->
+<section class="py-24 px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20 reveal-element">
+<h2 class="font-headline-md text-headline-md mb-4 text-primary">A Modern Suite of Operations</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">From identification to long-term stewardship, we provide the catalyst for architectural excellence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Acquisition -->
+<div class="bg-background p-10 shadow-sm border-b-4 border-secondary reveal-element">
+<span class="material-symbols-outlined text-[40px] text-secondary mb-6">search_insights</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Strategic Acquisition</h3>
+<p class="font-body-md text-on-surface-variant mb-6">We utilize proprietary market data to identify assets where architectural intervention creates exponential value.</p>
+<ul class="space-y-3 font-label-caps text-[11px] tracking-wider text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-secondary rounded-full"></span> DEEP MARKET ANALYSIS</li>
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-secondary rounded-full"></span> STRUCTURAL AUDITS</li>
+</ul>
+</div>
+<!-- Renovation -->
+<div class="bg-background p-10 shadow-sm border-b-4 border-primary reveal-element" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-[40px] text-primary mb-6">design_services</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Visionary Renovation</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Our design team blends historic preservation with modern efficiency to create spaces that define the next century.</p>
+<ul class="space-y-3 font-label-caps text-[11px] tracking-wider text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-primary rounded-full"></span> ARCHITECTURAL OVERSIGHT</li>
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-primary rounded-full"></span> SUSTAINABLE RETROFITTING</li>
+</ul>
+</div>
+<!-- Management -->
+<div class="bg-background p-10 shadow-sm border-b-4 border-tertiary-fixed-dim reveal-element" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-[40px] text-tertiary-fixed-dim mb-6">real_estate_agent</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Asset Stewardship</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Preserving the integrity of our portfolio through white-glove management and proactive asset care.</p>
+<ul class="space-y-3 font-label-caps text-[11px] tracking-wider text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-tertiary-fixed-dim rounded-full"></span> LUXURY LEASING</li>
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-tertiary-fixed-dim rounded-full"></span> VALUE PRESERVATION</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 bg-primary-container relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<h2 class="text-[20vw] font-display-lg text-white whitespace-nowrap leading-none select-none">THE CATALYST</h2>
+</div>
+<div class="relative z-10 text-center px-margin-mobile reveal-element">
+<h2 class="font-headline-md text-white text-display-lg-mobile md:text-headline-md mb-8">Ready to evolve your portfolio?</h2>
+<p class="font-body-lg text-white/70 max-w-xl mx-auto mb-12">Join us in shaping the architectural landscape of tomorrow. Professional expertise, approachable collaboration.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-secondary text-on-secondary px-12 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:scale-105 transition-transform duration-300">
+                Partner with the Group
+            </button>
+<button class="bg-transparent border border-white/30 text-white px-12 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-white/10 transition-colors">
+                Download PRD
+            </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-on-background border-t-2 border-on-background">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto text-surface">
+<div class="md:col-span-4">
+<div class="font-display-lg text-headline-sm text-surface mb-6">MONOLITH</div>
+<p class="font-body-sm text-surface-variant opacity-70 max-w-xs mb-8">A modern catalyst for architectural integrity and strategic investment across global urban centers.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-container transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-container transition-colors">token</span>
+</div>
+</div>
+<div class="md:col-span-2 md:col-start-6">
+<h4 class="font-label-caps text-[10px] uppercase tracking-widest text-secondary-fixed mb-6">Navigation</h4>
+<ul class="space-y-4 font-body-sm text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="portfolio.html">Portfolio</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="acquisitions.html">Acquisitions</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="renovation.html">Renovation</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="philosophy.html">Philosophy</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="book.html">Book</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-[10px] uppercase tracking-widest text-secondary-fixed mb-6">Corporate</h4>
+<ul class="space-y-4 font-body-sm text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="#">Press Kit</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Investor Relations</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-label-caps text-[10px] uppercase tracking-widest text-secondary-fixed mb-6">Legal</h4>
+<ul class="space-y-4 font-body-sm text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors underline" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Terms of Service</a></li>
+</ul>
+<div class="mt-12 text-[12px] opacity-40">
+                &copy; 2024 Monolith Holding Group. All rights reserved.
+            </div>
+</div>
+</div>
+</footer>
+<script>
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-element').forEach(el => {
+        observer.observe(el);
+    });
+
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 100) {
+            nav.classList.add('py-4', 'shadow-sm');
+            nav.classList.remove('py-6');
+        } else {
+            nav.classList.add('py-6');
+            nav.classList.remove('py-4', 'shadow-sm');
+        }
+    });
+</script>
+</body></html>

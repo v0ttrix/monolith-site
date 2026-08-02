@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MONOLITH | Philosophy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-background": "#1c1b1a", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#79301b",
+        "background": "#fdf9f6", "tertiary-fixed-dim": "#d7c3b1", "on-tertiary-fixed-variant": "#524436",
+        "on-secondary": "#ffffff", "on-error": "#ffffff", "inverse-primary": "#c8c6c6",
+        "surface-variant": "#e5e2df", "on-surface-variant": "#444748", "on-primary": "#ffffff",
+        "surface-container-high": "#ebe7e4", "tertiary-container": "#372b1e", "secondary-fixed": "#ffdbd1",
+        "surface-dim": "#ddd9d6", "tertiary-fixed": "#f4dfcc", "on-tertiary": "#ffffff",
+        "surface-container": "#f1edea", "error": "#ba1a1a", "inverse-on-surface": "#f4f0ed",
+        "surface-container-low": "#f7f3f0", "primary-container": "#2d2d2d", "on-secondary-fixed": "#3b0900",
+        "outline": "#747878", "outline-variant": "#c4c7c7", "primary-fixed-dim": "#c8c6c6",
+        "surface-container-lowest": "#ffffff", "on-surface": "#1c1b1a", "secondary": "#974730",
+        "on-tertiary-container": "#a49181", "surface-bright": "#fdf9f6", "secondary-container": "#fe987c",
+        "on-primary-fixed": "#1b1c1c", "on-secondary-container": "#772e1a", "primary": "#181919",
+        "surface-container-highest": "#e5e2df", "on-tertiary-fixed": "#24190e", "surface": "#fdf9f6",
+        "on-primary-container": "#959494", "inverse-surface": "#31302f", "secondary-fixed-dim": "#ffb5a1",
+        "on-primary-fixed-variant": "#474747", "primary-fixed": "#e4e2e1", "tertiary": "#21170b",
+        "on-error-container": "#93000a", "surface-tint": "#5f5e5e"
+      },
+      "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+      "spacing": { "margin-mobile": "20px", "margin-desktop": "64px", "unit": "8px", "gutter": "24px", "container-max": "1280px" },
+      "fontFamily": {
+        "body-sm": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"],
+        "headline-md": ["Bodoni Moda"], "display-lg-mobile": ["Bodoni Moda"],
+        "label-caps": ["Inter"], "headline-sm": ["Bodoni Moda"], "display-lg": ["Bodoni Moda"]
+      },
+      "fontSize": {
+        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+      }
+    },
+  },
+}
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+.reveal-element { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+.reveal-element.active { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-on-secondary overflow-x-hidden">
+
+<!-- Nav -->
+<nav class="w-full top-0 left-0 sticky z-50 bg-background/95 backdrop-blur-md border-b border-on-background/10">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<a href="index.html" class="font-display-lg text-headline-md tracking-tighter text-on-surface hover:text-secondary transition-colors">MONOLITH</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors" href="portfolio.html">Portfolio</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors" href="acquisitions.html">Acquisitions</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors" href="renovation.html">Renovation</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-secondary font-bold border-b-2 border-secondary cursor-pointer" href="philosophy.html">Philosophy</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors" href="book.html">Book</a>
+</div>
+<a href="book.html" class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:opacity-80 transition-all active:scale-95">Book Now</a>
+</div>
+</nav>
+
+<!-- Page Header -->
+<section class="py-20 px-margin-desktop bg-primary-container">
+<div class="max-w-container-max mx-auto">
+<span class="font-label-caps text-label-caps text-secondary-container tracking-[0.3em] uppercase mb-4 block reveal-element active">Our Beliefs</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white max-w-3xl leading-none reveal-element active" style="transition-delay: 200ms;">
+    The <span class="text-secondary-container italic">Philosophy</span>
+</h1>
+<p class="font-body-lg text-white/70 mt-6 max-w-2xl reveal-element active" style="transition-delay: 400ms;">
+    What we believe shapes what we build. Our guiding principles define every decision, from the properties we acquire to the communities we serve.
+</p>
+</div>
+</section>
+
+<!-- Core Beliefs -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="max-w-3xl mx-auto text-center mb-20 reveal-element">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Built on Conviction</h2>
+<p class="font-body-lg text-on-surface-variant">Monolith was founded on the belief that real estate development can be both deeply profitable and profoundly human. We reject the false choice between returns and responsibility.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- Belief 1 -->
+<div class="reveal-element">
+<div class="flex items-start gap-6">
+<div class="w-16 h-16 bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[32px] text-secondary">foundation</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Structural Honesty</h3>
+<p class="font-body-md text-on-surface-variant">We believe the best architecture reveals rather than conceals. Exposed beams, honest materials, and transparent processes — these aren't aesthetic choices, they're ethical ones.</p>
+</div>
+</div>
+</div>
+
+<!-- Belief 2 -->
+<div class="reveal-element" style="transition-delay: 100ms;">
+<div class="flex items-start gap-6">
+<div class="w-16 h-16 bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[32px] text-secondary">groups</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Community First</h3>
+<p class="font-body-md text-on-surface-variant">Every acquisition exists within a neighborhood. We measure success not only in returns but in the vitality we bring to the streets, the jobs we create, and the pride residents feel.</p>
+</div>
+</div>
+</div>
+
+<!-- Belief 3 -->
+<div class="reveal-element" style="transition-delay: 200ms;">
+<div class="flex items-start gap-6">
+<div class="w-16 h-16 bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[32px] text-secondary">spa</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Long-Term Stewardship</h3>
+<p class="font-body-md text-on-surface-variant">We don't flip buildings. We steward them. Our average hold period reflects our commitment to being present for the full lifecycle of transformation — and beyond.</p>
+</div>
+</div>
+</div>
+
+<!-- Belief 4 -->
+<div class="reveal-element" style="transition-delay: 300ms;">
+<div class="flex items-start gap-6">
+<div class="w-16 h-16 bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[32px] text-secondary">eco</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Sustainable by Default</h3>
+<p class="font-body-md text-on-surface-variant">Sustainability isn't an add-on; it's embedded in our process. Adaptive reuse is inherently sustainable — the greenest building is one that already exists. We amplify that with modern systems.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Quote Section -->
+<section class="py-24 bg-on-background">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center reveal-element">
+<div class="max-w-3xl mx-auto">
+<span class="material-symbols-outlined text-[48px] text-secondary-fixed mb-8">format_quote</span>
+<blockquote class="font-headline-md text-headline-sm md:text-headline-md text-white italic leading-relaxed mb-8">
+    "We see beyond the brick and mortar to the lives that will be lived within these walls. Every acquisition is a promise of renewal — a covenant between what was and what could be."
+</blockquote>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-px bg-secondary-fixed"></div>
+<span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-widest">The Founding Principle</span>
+<div class="w-12 h-px bg-secondary-fixed"></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Values in Action -->
+<section class="py-24 px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary mb-16 text-center reveal-element">Values in Practice</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="text-center p-10 reveal-element">
+<div class="w-20 h-20 bg-secondary/10 mx-auto flex items-center justify-center mb-6">
+<span class="font-headline-md text-headline-md text-secondary">94%</span>
+</div>
+<h3 class="font-headline-sm text-body-lg font-semibold mb-2">Tenant Satisfaction</h3>
+<p class="font-body-sm text-on-surface-variant">Across our entire portfolio, measured annually through independent surveys.</p>
+</div>
+
+<div class="text-center p-10 reveal-element" style="transition-delay: 100ms;">
+<div class="w-20 h-20 bg-secondary/10 mx-auto flex items-center justify-center mb-6">
+<span class="font-headline-md text-headline-md text-secondary">100%</span>
+</div>
+<h3 class="font-headline-sm text-body-lg font-semibold mb-2">Local Hiring</h3>
+<p class="font-body-sm text-on-surface-variant">All renovation projects maintain minimum 60% local workforce participation.</p>
+</div>
+
+<div class="text-center p-10 reveal-element" style="transition-delay: 200ms;">
+<div class="w-20 h-20 bg-secondary/10 mx-auto flex items-center justify-center mb-6">
+<span class="font-headline-md text-headline-md text-secondary">0</span>
+</div>
+<h3 class="font-headline-sm text-body-lg font-semibold mb-2">Displacement Events</h3>
+<p class="font-body-sm text-on-surface-variant">We acquire vacant or commercial properties exclusively — no residential displacement, ever.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Team / Leadership -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 reveal-element">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-4 block">Leadership</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">People Who Build Differently</h2>
+<p class="font-body-lg text-on-surface-variant mb-6">
+    Our leadership team brings together decades of experience in architecture, finance, community development, and sustainable engineering.
+</p>
+<p class="font-body-md text-on-surface-variant">
+    What unites us is a shared conviction: that the built environment should serve everyone — investors, residents, and communities — equally well.
+</p>
+</div>
+<div class="md:col-span-6 md:col-start-7 reveal-element" style="transition-delay: 200ms;">
+<div class="bg-surface-container p-12">
+<div class="space-y-8">
+<div class="flex items-center gap-6 border-b border-outline-variant/30 pb-6">
+<div class="w-14 h-14 bg-primary-container flex items-center justify-center">
+<span class="font-label-caps text-label-caps text-white">JM</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-lg font-semibold">James Moreau</h4>
+<p class="font-body-sm text-on-surface-variant">Founding Partner & CEO</p>
+</div>
+</div>
+<div class="flex items-center gap-6 border-b border-outline-variant/30 pb-6">
+<div class="w-14 h-14 bg-primary-container flex items-center justify-center">
+<span class="font-label-caps text-label-caps text-white">SK</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-lg font-semibold">Sarah Kimura</h4>
+<p class="font-body-sm text-on-surface-variant">Chief Architecture Officer</p>
+</div>
+</div>
+<div class="flex items-center gap-6 border-b border-outline-variant/30 pb-6">
+<div class="w-14 h-14 bg-primary-container flex items-center justify-center">
+<span class="font-label-caps text-label-caps text-white">DR</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-lg font-semibold">David Reeves</h4>
+<p class="font-body-sm text-on-surface-variant">Head of Acquisitions</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-primary-container flex items-center justify-center">
+<span class="font-label-caps text-label-caps text-white">AL</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-lg font-semibold">Amara Laurent</h4>
+<p class="font-body-sm text-on-surface-variant">Director of Community Relations</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-primary-container">
+<div class="max-w-container-max mx-auto text-center px-margin-desktop reveal-element">
+<h2 class="font-headline-md text-headline-md text-white mb-4">Share our vision?</h2>
+<p class="font-body-lg text-white/70 max-w-xl mx-auto mb-10">We're always looking for like-minded partners, investors, and collaborators who believe development can be done differently.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<a href="book.html" class="inline-block bg-secondary text-on-secondary px-12 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:scale-105 transition-transform duration-300">Start a Conversation</a>
+<a href="portfolio.html" class="inline-block bg-transparent border border-white/30 text-white px-12 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-white/10 transition-colors">View Our Work</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full mt-20 bg-on-background border-t-2 border-on-background">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto text-surface">
+<div class="md:col-span-4">
+<a href="index.html" class="font-display-lg text-headline-sm text-surface mb-6 block hover:text-secondary-container transition-colors">MONOLITH</a>
+<p class="font-body-sm text-surface-variant opacity-70 max-w-xs mb-8">A modern catalyst for architectural integrity and strategic investment across global urban centers.</p>
+</div>
+<div class="md:col-span-2 md:col-start-6">
+<h4 class="font-label-caps text-[10px] uppercase tracking-widest text-secondary-fixed mb-6">Navigation</h4>
+<ul class="space-y-4 font-body-sm text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="portfolio.html">Portfolio</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="acquisitions.html">Acquisitions</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="renovation.html">Renovation</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="philosophy.html">Philosophy</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="book.html">Book</a></li>
+</ul>
+</div>
+<div class="md:col-span-3 md:col-start-10">
+<h4 class="font-label-caps text-[10px] uppercase tracking-widest text-secondary-fixed mb-6">Legal</h4>
+<ul class="space-y-4 font-body-sm text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Terms of Service</a></li>
+</ul>
+<div class="mt-12 text-[12px] opacity-40">&copy; 2024 Monolith Holding Group. All rights reserved.</div>
+</div>
+</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal-element').forEach(el => observer.observe(el));
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 100) { nav.classList.add('py-4', 'shadow-sm'); nav.classList.remove('py-6'); }
+    else { nav.classList.add('py-6'); nav.classList.remove('py-4', 'shadow-sm'); }
+});
+</script>
+</body>
+</html>

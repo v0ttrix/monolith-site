@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MONOLITH | Renovation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-background": "#1c1b1a", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#79301b",
+        "background": "#fdf9f6", "tertiary-fixed-dim": "#d7c3b1", "on-tertiary-fixed-variant": "#524436",
+        "on-secondary": "#ffffff", "on-error": "#ffffff", "inverse-primary": "#c8c6c6",
+        "surface-variant": "#e5e2df", "on-surface-variant": "#444748", "on-primary": "#ffffff",
+        "surface-container-high": "#ebe7e4", "tertiary-container": "#372b1e", "secondary-fixed": "#ffdbd1",
+        "surface-dim": "#ddd9d6", "tertiary-fixed": "#f4dfcc", "on-tertiary": "#ffffff",
+        "surface-container": "#f1edea", "error": "#ba1a1a", "inverse-on-surface": "#f4f0ed",
+        "surface-container-low": "#f7f3f0", "primary-container": "#2d2d2d", "on-secondary-fixed": "#3b0900",
+        "outline": "#747878", "outline-variant": "#c4c7c7", "primary-fixed-dim": "#c8c6c6",
+        "surface-container-lowest": "#ffffff", "on-surface": "#1c1b1a", "secondary": "#974730",
+        "on-tertiary-container": "#a49181", "surface-bright": "#fdf9f6", "secondary-container": "#fe987c",
+        "on-primary-fixed": "#1b1c1c", "on-secondary-container": "#772e1a", "primary": "#181919",
+        "surface-container-highest": "#e5e2df", "on-tertiary-fixed": "#24190e", "surface": "#fdf9f6",
+        "on-primary-container": "#959494", "inverse-surface": "#31302f", "secondary-fixed-dim": "#ffb5a1",
+        "on-primary-fixed-variant": "#474747", "primary-fixed": "#e4e2e1", "tertiary": "#21170b",
+        "on-error-container": "#93000a", "surface-tint": "#5f5e5e"
+      },
+      "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+      "spacing": { "margin-mobile": "20px", "margin-desktop": "64px", "unit": "8px", "gutter": "24px", "container-max": "1280px" },
+      "fontFamily": {
+        "body-sm": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"],
+        "headline-md": ["Bodoni Moda"], "display-lg-mobile": ["Bodoni Moda"],
+        "label-caps": ["Inter"], "headline-sm": ["Bodoni Moda"], "display-lg": ["Bodoni Moda"]
+      },
+      "fontSize": {
+        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+      }
+    },
+  },
+}
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+.reveal-element { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+.reveal-element.active { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-on-secondary overflow-x-hidden">
+
+<!-- Nav -->
+<nav class="w-full top-0 left-0 sticky z-50 bg-background/95 backdrop-blur-md border-b border-on-background/10">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<a href="index.html" class="font-display-lg text-headline-md tracking-tighter text-on-surface hover:text-secondary transition-colors">MONOLITH</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors" href="portfolio.html">Portfolio</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors" href="acquisitions.html">Acquisitions</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-secondary font-bold border-b-2 border-secondary cursor-pointer" href="renovation.html">Renovation</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors" href="philosophy.html">Philosophy</a>
+<a class="font-headline-sm text-[14px] uppercase tracking-widest text-on-surface hover:text-secondary transition-colors" href="book.html">Book</a>
+</div>
+<a href="book.html" class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:opacity-80 transition-all active:scale-95">Book Now</a>
+</div>
+</nav>
+
+<!-- Page Header -->
+<section class="py-20 px-margin-desktop bg-primary-container">
+<div class="max-w-container-max mx-auto">
+<span class="font-label-caps text-label-caps text-secondary-container tracking-[0.3em] uppercase mb-4 block reveal-element active">Visionary Design</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white max-w-3xl leading-none reveal-element active" style="transition-delay: 200ms;">
+    <span class="text-secondary-container italic">Renovation</span>
+</h1>
+<p class="font-body-lg text-white/70 mt-6 max-w-2xl reveal-element active" style="transition-delay: 400ms;">
+    We blend historic preservation with cutting-edge design to create spaces that honor the past while defining the future.
+</p>
+</div>
+</section>
+
+<!-- Design Philosophy -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 reveal-element">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Architecture as Storytelling</h2>
+<p class="font-body-lg text-on-surface-variant mb-6">
+    Every building has a narrative. Our renovation philosophy centers on amplifying that narrative — preserving the character that makes a structure irreplaceable while introducing modern systems that ensure its next century of life.
+</p>
+<p class="font-body-md text-on-surface-variant">
+    We work with award-winning architects, sustainable engineers, and local artisans to craft spaces that feel both timeless and forward-looking.
+</p>
+</div>
+<div class="md:col-span-6 md:col-start-7 reveal-element" style="transition-delay: 200ms;">
+<div class="relative">
+<img alt="Renovation in progress" class="w-full aspect-[4/3] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvm4oKBvLFFvrVzKGDhmX0QC72fAu-g8qVPgAdIRnnRI5UMxpNektgHftO00Z59pbmZLEqSu2xMYCRcuEckPp3XYTGI3_n2sAZYg4wvFk7UkRW_wwPzqwJ2aahbY_KS7Ki73V42ypsSMheKp7vfKHyn_1auLeYF7dBZoleTuPqjg8IZRPvKJnmEAdk0Cn-HxaxbSD31dIZHfpSNIwSmJz-HlTgNmPPTe_23cW4NY9FyYbQUfmdO_bi9A"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-on-background/80 to-transparent p-8">
+<p class="font-label-caps text-[10px] text-white uppercase tracking-widest">The Meridian — During Renovation</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Services Grid -->
+<section class="py-24 px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20 reveal-element">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Our Renovation Services</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">End-to-end renovation management from concept to certificate of occupancy.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="bg-background p-10 border-l-4 border-secondary reveal-element">
+<span class="material-symbols-outlined text-[36px] text-secondary mb-4">architecture</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Architectural Design</h3>
+<p class="font-body-sm text-on-surface-variant">Full architectural services from concept sketches through construction documentation, led by nationally recognized firms.</p>
+</div>
+
+<div class="bg-background p-10 border-l-4 border-secondary reveal-element" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-[36px] text-secondary mb-4">eco</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Sustainable Systems</h3>
+<p class="font-body-sm text-on-surface-variant">LEED-targeted retrofitting including solar integration, high-efficiency HVAC, and smart building automation.</p>
+</div>
+
+<div class="bg-background p-10 border-l-4 border-secondary reveal-element" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-[36px] text-secondary mb-4">history_edu</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Historic Preservation</h3>
+<p class="font-body-sm text-on-surface-variant">Expert restoration of heritage elements — masonry, ironwork, ornamental details — maintaining architectural provenance.</p>
+</div>
+
+<div class="bg-background p-10 border-l-4 border-primary reveal-element">
+<span class="material-symbols-outlined text-[36px] text-primary mb-4">engineering</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Structural Engineering</h3>
+<p class="font-body-sm text-on-surface-variant">Seismic retrofitting, load-bearing modifications, and foundation reinforcement for adaptive reuse projects.</p>
+</div>
+
+<div class="bg-background p-10 border-l-4 border-primary reveal-element" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-[36px] text-primary mb-4">palette</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Interior Design</h3>
+<p class="font-body-sm text-on-surface-variant">Curated material palettes, custom millwork, and spatial planning that maximizes both beauty and functionality.</p>
+</div>
+
+<div class="bg-background p-10 border-l-4 border-primary reveal-element" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-[36px] text-primary mb-4">landscape</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Landscape & Exterior</h3>
+<p class="font-body-sm text-on-surface-variant">Streetscape integration, courtyard design, rooftop amenities, and facade restoration that elevates the entire block.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Timeline -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary mb-16 text-center reveal-element">Typical Project Timeline</h2>
+
+<div class="relative">
+<!-- Timeline line -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-outline-variant"></div>
+
+<div class="space-y-16">
+<!-- Phase 1 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center reveal-element">
+<div class="md:text-right md:pr-12">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Month 1–2</span>
+<h3 class="font-headline-sm text-headline-sm mt-2">Design & Permitting</h3>
+<p class="font-body-sm text-on-surface-variant mt-2">Architectural plans finalized, permits filed, contractor selection begins.</p>
+</div>
+<div class="hidden md:flex justify-start">
+<div class="w-4 h-4 bg-secondary rounded-full relative -left-2"></div>
+</div>
+</div>
+
+<!-- Phase 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center reveal-element" style="transition-delay: 100ms;">
+<div class="hidden md:block"></div>
+<div class="md:pl-12">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Month 3–6</span>
+<h3 class="font-headline-sm text-headline-sm mt-2">Structural & Systems</h3>
+<p class="font-body-sm text-on-surface-variant mt-2">Core structural work, mechanical/electrical/plumbing rough-in, envelope improvements.</p>
+</div>
+</div>
+
+<!-- Phase 3 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center reveal-element" style="transition-delay: 200ms;">
+<div class="md:text-right md:pr-12">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Month 7–10</span>
+<h3 class="font-headline-sm text-headline-sm mt-2">Finishes & Details</h3>
+<p class="font-body-sm text-on-surface-variant mt-2">Interior finishing, custom installations, landscape work, and quality inspections.</p>
+</div>
+<div class="hidden md:flex justify-start">
+<div class="w-4 h-4 bg-secondary rounded-full relative -left-2"></div>
+</div>
+</div>
+
+<!-- Phase 4 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center reveal-element" style="transition-delay: 300ms;">
+<div class="hidden md:block"></div>
+<div class="md:pl-12">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Month 11–12</span>
+<h3 class="font-headline-sm text-headline-sm mt-2">Delivery & Activation</h3>
+<p class="font-body-sm text-on-surface-variant mt-2">Final inspections, certificate of occupancy, marketing launch, and tenant onboarding.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-primary-container">
+<div class="max-w-container-max mx-auto text-center px-margin-desktop reveal-element">
+<h2 class="font-headline-md text-headline-md text-white mb-4">Have a project in mind?</h2>
+<p class="font-body-lg text-white/70 max-w-xl mx-auto mb-10">From concept to completion, our team brings visionary design and meticulous execution to every renovation.</p>
+<a href="book.html" class="inline-block bg-secondary text-on-secondary px-12 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:scale-105 transition-transform duration-300">Discuss Your Project</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full mt-20 bg-on-background border-t-2 border-on-background">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto text-surface">
+<div class="md:col-span-4">
+<a href="index.html" class="font-display-lg text-headline-sm text-surface mb-6 block hover:text-secondary-container transition-colors">MONOLITH</a>
+<p class="font-body-sm text-surface-variant opacity-70 max-w-xs mb-8">A modern catalyst for architectural integrity and strategic investment across global urban centers.</p>
+</div>
+<div class="md:col-span-2 md:col-start-6">
+<h4 class="font-label-caps text-[10px] uppercase tracking-widest text-secondary-fixed mb-6">Navigation</h4>
+<ul class="space-y-4 font-body-sm text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="portfolio.html">Portfolio</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="acquisitions.html">Acquisitions</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="renovation.html">Renovation</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="philosophy.html">Philosophy</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="book.html">Book</a></li>
+</ul>
+</div>
+<div class="md:col-span-3 md:col-start-10">
+<h4 class="font-label-caps text-[10px] uppercase tracking-widest text-secondary-fixed mb-6">Legal</h4>
+<ul class="space-y-4 font-body-sm text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Terms of Service</a></li>
+</ul>
+<div class="mt-12 text-[12px] opacity-40">&copy; 2024 Monolith Holding Group. All rights reserved.</div>
+</div>
+</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal-element').forEach(el => observer.observe(el));
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 100) { nav.classList.add('py-4', 'shadow-sm'); nav.classList.remove('py-6'); }
+    else { nav.classList.add('py-6'); nav.classList.remove('py-4', 'shadow-sm'); }
+});
+</script>
+</body>
+</html>
