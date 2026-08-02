@@ -76,7 +76,7 @@
 <!-- Form -->
 <div class="lg:col-span-7 reveal-element active">
 <div class="bg-surface-container-lowest shadow-sm border border-outline-variant/30 p-6 md:p-12">
-<h2 class="font-headline-md text-headline-md text-primary mb-4">List Your Property</h2>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Sell Your Property</h2>
 <p class="font-body-md text-on-surface-variant mb-8">Fill out the form below and our team will review your property and get back to you within 24 hours.</p>
 
 <form id="sellingForm" class="space-y-6" novalidate>
@@ -128,6 +128,17 @@
 <div>
 <label for="propertyDetails" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Additional Details (Optional)</label>
 <textarea id="propertyDetails" rows="4" class="w-full border border-outline-variant bg-background px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Bedrooms, bathrooms, square footage, special features, reason for selling..."></textarea>
+</div>
+
+<div>
+<label for="propertyImages" class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Property Photos (Optional)</label>
+<div class="border-2 border-dashed border-outline-variant bg-background px-6 py-8 text-center hover:border-secondary transition-colors cursor-pointer" id="dropZone">
+<span class="material-symbols-outlined text-[36px] text-on-surface-variant/50 mb-2" aria-hidden="true">add_photo_alternate</span>
+<p class="font-body-sm text-on-surface-variant mb-1">Drag & drop images here or click to browse</p>
+<p class="font-body-sm text-on-surface-variant/60 text-[12px]">JPG, PNG up to 10MB each · Max 10 photos</p>
+<input id="propertyImages" type="file" multiple accept="image/*" class="hidden"/>
+</div>
+<div id="imagePreview" class="grid grid-cols-4 gap-2 mt-3"></div>
 </div>
 
 <button type="submit" class="w-full bg-secondary text-on-secondary px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:opacity-90 transition-all active:scale-95">Submit Property</button>
@@ -279,9 +290,48 @@ document.getElementById('sellingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('sellerFirstName').value + ' ' + document.getElementById('sellerLastName').value;
     const address = document.getElementById('propertyAddress').value;
-    alert(`Thank you, ${name}! Your property at "${address}" has been submitted. Our team will contact you within 24 hours.`);
+    const fileCount = document.getElementById('propertyImages').files.length;
+    const photoMsg = fileCount > 0 ? ` with ${fileCount} photo${fileCount > 1 ? 's' : ''}` : '';
+    alert(`Thank you, ${name}! Your property at "${address}"${photoMsg} has been submitted. Our team will contact you within 24 hours.`);
     this.reset();
+    document.getElementById('imagePreview').innerHTML = '';
 });
+
+// Image upload handling
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('propertyImages');
+const imagePreview = document.getElementById('imagePreview');
+
+dropZone.addEventListener('click', () => fileInput.click());
+dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('border-secondary', 'bg-secondary/5'); });
+dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('border-secondary', 'bg-secondary/5'); });
+dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('border-secondary', 'bg-secondary/5');
+    const files = e.dataTransfer.files;
+    handleFiles(files);
+});
+fileInput.addEventListener('change', () => handleFiles(fileInput.files));
+
+function handleFiles(files) {
+    imagePreview.innerHTML = '';
+    const dt = new DataTransfer();
+    const maxFiles = Math.min(files.length, 10);
+    for (let i = 0; i < maxFiles; i++) {
+        if (files[i].type.startsWith('image/')) {
+            dt.items.add(files[i]);
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const div = document.createElement('div');
+                div.className = 'relative aspect-square overflow-hidden bg-surface-container';
+                div.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-cover" alt="Upload preview"/>`;
+                imagePreview.appendChild(div);
+            };
+            reader.readAsDataURL(files[i]);
+        }
+    }
+    fileInput.files = dt.files;
+}
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
