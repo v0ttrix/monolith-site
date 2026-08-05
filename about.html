@@ -231,9 +231,9 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal-element').forEach(el => observer.observe(el));
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    if (window.scrollY > 100) { nav.classList.add('py-4', 'shadow-sm'); nav.classList.remove('py-6'); }
-    else { nav.classList.add('py-6'); nav.classList.remove('py-4', 'shadow-sm'); }
-});
+    if (window.scrollY > 100) { nav.classList.add('shadow-sm'); }
+    else { nav.classList.remove('shadow-sm'); }
+}, { passive: true });
 </script>
 </body>
 </html>
