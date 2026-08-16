@@ -50,6 +50,129 @@ export default function HomePage() {
 
 
 
+      {/* How We Work */}
+      <section className="py-24 bg-[#f5ede4]">
+        <div className="max-w-site mx-auto px-5 md:px-16">
+          <RevealGroup className="text-center mb-16">
+            <h2 className="font-display text-heading-lg text-brand mb-4">How We Work</h2>
+            <p className="text-slate max-w-2xl mx-auto">
+              From buying to renovating to selling, we handle everything so you don&apos;t have to.
+            </p>
+          </RevealGroup>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {/* 01 */}
+            <RevealGroup className="text-center">
+              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-6 flex items-center justify-center">
+                <span className="font-display text-sm text-accent italic">01</span>
+              </div>
+              <h3 className="font-display text-xl font-bold text-brand uppercase tracking-wide mb-2">
+                Chicago-Based.<br />Community-Focused.<br />Results-Driven.
+              </h3>
+              <div className="flex items-center justify-center gap-2 my-4">
+                <div className="w-8 h-[2px] bg-accent" />
+                <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <div className="w-8 h-[2px] bg-accent" />
+              </div>
+              <p className="text-sm text-slate">
+                Hayat Holdings is a Chicago-based real estate company with a simple mission: to <strong className="text-accent">transform</strong> houses and <strong className="text-accent">elevate</strong> neighborhoods.
+              </p>
+            </RevealGroup>
+
+            {/* 02 */}
+            <RevealGroup className="text-center reveal-delay-1">
+              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-4 flex items-center justify-center">
+                <span className="font-display text-sm text-accent italic">02</span>
+              </div>
+              <div className="w-16 h-16 rounded-full border-2 border-charcoal mx-auto mb-4 flex items-center justify-center">
+                <span className="material-symbols-outlined text-[28px] text-charcoal" aria-hidden="true">handshake</span>
+              </div>
+              <h3 className="font-display text-xl font-bold uppercase tracking-wide mb-1">
+                <span className="text-brand">We Buy.</span><br />
+                <span className="text-accent">You Win.</span>
+              </h3>
+              <div className="flex items-center justify-center gap-2 my-4">
+                <div className="w-8 h-[2px] bg-accent" />
+                <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <div className="w-8 h-[2px] bg-accent" />
+              </div>
+              <p className="text-sm text-slate">
+                We buy homes directly from owners at fair, competitive prices—ensuring a smooth, respectful, and stress-free experience.
+              </p>
+            </RevealGroup>
+
+            {/* 03 */}
+            <RevealGroup className="text-center reveal-delay-2">
+              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-4 flex items-center justify-center">
+                <span className="font-display text-sm text-accent italic">03</span>
+              </div>
+              <div className="w-16 h-16 rounded-full border-2 border-charcoal mx-auto mb-4 flex items-center justify-center">
+                <span className="material-symbols-outlined text-[28px] text-charcoal" aria-hidden="true">construction</span>
+              </div>
+              <h3 className="font-display text-xl font-bold uppercase tracking-wide mb-1">
+                <span className="text-brand">We Renovate.</span><br />
+                <span className="text-accent">We Reimagine.</span>
+              </h3>
+              <div className="flex items-center justify-center gap-2 my-4">
+                <div className="w-8 h-[2px] bg-accent" />
+                <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <div className="w-8 h-[2px] bg-accent" />
+              </div>
+              <p className="text-sm text-slate">
+                Our expert team rebuilds and redesigns every property with quality, style, and function—blending modern living with timeless appeal.
+              </p>
+            </RevealGroup>
+
+            {/* 04 */}
+            <RevealGroup className="text-center reveal-delay-3">
+              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-4 flex items-center justify-center">
+                <span className="font-display text-sm text-accent italic">04</span>
+              </div>
+              <div className="w-16 h-16 rounded-full border-2 border-charcoal mx-auto mb-4 flex items-center justify-center">
+                <span className="material-symbols-outlined text-[28px] text-charcoal" aria-hidden="true">location_city</span>
+              </div>
+              <h3 className="font-display text-xl font-bold uppercase tracking-wide mb-1">
+                <span className="text-brand">We Sell.</span><br />
+                <span className="text-accent">We Create Reality.</span>
+              </h3>
+              <div className="flex items-center justify-center gap-2 my-4">
+                <div className="w-8 h-[2px] bg-accent" />
+                <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <div className="w-8 h-[2px] bg-accent" />
+              </div>
+              <p className="text-sm text-slate">
+                We bring beautiful, move-in-ready homes to Chicago&apos;s vibrant market—helping buyers find their dream home and investors find real value.
+              </p>
+            </RevealGroup>
+
+            {/* 05 */}
+            <RevealGroup className="text-center reveal-delay-4">
+              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-4 flex items-center justify-center">
+                <span className="font-display text-sm text-accent italic">05</span>
+              </div>
+              <div className="w-16 h-16 rounded-full border-2 border-charcoal mx-auto mb-4 flex items-center justify-center">
+                <span className="material-symbols-outlined text-[28px] text-charcoal" aria-hidden="true">favorite</span>
+              </div>
+              <h3 className="font-display text-xl font-bold uppercase tracking-wide mb-1">
+                <span className="text-brand">Building More Than Homes.</span><br />
+                <span className="text-accent">We&apos;re Building Futures.</span>
+              </h3>
+              <div className="flex items-center justify-center gap-2 my-4">
+                <div className="w-8 h-[2px] bg-accent" />
+                <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <div className="w-8 h-[2px] bg-accent" />
+              </div>
+              <p className="text-sm text-slate">
+                At Hayat Holdings, we don&apos;t just flip houses—we create opportunities, strengthen communities, and turn real estate dreams into reality.
+              </p>
+              <p className="text-xs uppercase tracking-widest text-brand font-bold mt-6">
+                Chicago is our home.<br />Making dreams real, one home at a time.
+              </p>
+            </RevealGroup>
+          </div>
+        </div>
+      </section>
+
       {/* Before & After */}
       <Section className="bg-charcoal text-bone overflow-hidden">
         <RevealGroup className="mb-16 flex flex-col md:flex-row justify-between items-baseline gap-4">
