@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { PageHero, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "HAYAT HOLDINGS | Privacy Policy",
-  description: "Privacy policy for Hayat Holdings. Learn how we collect, use, and protect your personal information.",
+  title: "USHAYAT HOLDINGS | Privacy Policy",
+  description: "Privacy policy for Ushayat Holdings. Learn how we collect, use, and protect your personal information.",
   alternates: { canonical: "https://www.ushayat.com/privacy" },
 };
 
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       <Section>
         <div className="max-w-3xl mx-auto prose-style">
           <p className="text-slate mb-8 text-lg">
-            Hayat Holdings (&quot;we,&quot; &quot;us&quot;) is a cash home buyer that purchases properties directly from owners in the Chicago area. This page describes the personal information we gather when you use{" "}
+            Ushayat Holdings (&quot;we,&quot; &quot;us&quot;) is a cash home buyer that purchases properties directly from owners in the Chicago area. This page describes the personal information we gather when you use{" "}
             <a href="https://www.ushayat.com" className="text-accent hover:underline">ushayat.com</a>, what we do with it, and the control you have over it.
           </p>
 

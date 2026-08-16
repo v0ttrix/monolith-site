@@ -24,7 +24,7 @@ export default function Nav() {
           href="/"
           className="font-display text-heading-lg tracking-tighter text-charcoal hover:text-accent transition-colors"
         >
-          HAYAT HOLDINGS
+          USHAYAT HOLDINGS
         </Link>
 
         {/* Desktop nav */}

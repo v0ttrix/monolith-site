@@ -9,7 +9,7 @@ export default function Footer() {
             href="/"
             className="font-display text-heading-sm text-sand-dark mb-6 block hover:text-accent-bright transition-colors"
           >
-            HAYAT HOLDINGS
+            USHAYAT HOLDINGS
           </Link>
           <p className="text-sm text-muted max-w-xs mb-8">
             A Chicago-based real estate company that buys, renovates, and sells homes.
@@ -61,7 +61,7 @@ export default function Footer() {
             <li><a href="/privacy" className="hover:text-accent-bright transition-colors">Privacy Policy</a></li>
             <li><a href="#" className="hover:text-accent-bright transition-colors">Terms of Service</a></li>
           </ul>
-          <div className="mt-12 text-xs opacity-40">&copy; 2025 Hayat Holdings. All rights reserved.</div>
+          <div className="mt-12 text-xs opacity-40">&copy; 2025 Ushayat Holdings. All rights reserved.</div>
         </div>
       </div>
     </footer>

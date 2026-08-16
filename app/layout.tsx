@@ -18,10 +18,10 @@ const bodoni = Bodoni_Moda({
 });
 
 export const metadata: Metadata = {
-  title: "HAYAT HOLDINGS",
+  title: "USHAYAT HOLDINGS",
   description: "Chicago-based real estate company. We buy, renovate, and sell homes.",
   openGraph: {
-    siteName: "HAYAT HOLDINGS",
+    siteName: "USHAYAT HOLDINGS",
     type: "website",
     url: "https://www.ushayat.com",
   },

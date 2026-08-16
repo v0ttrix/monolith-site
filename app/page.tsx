@@ -5,10 +5,10 @@ import { Button, Section } from "@/components/ui";
 import RevealGroup from "@/components/RevealGroup";
 
 export const metadata: Metadata = {
-  title: "HAYAT HOLDINGS | We Buy. We Renovate. We Sell.",
-  description: "Hayat Holdings is a Chicago-based real estate company that buys, renovates, and sells homes. We transform houses and elevate neighborhoods.",
+  title: "USHAYAT HOLDINGS | We Buy. We Renovate. We Sell.",
+  description: "Ushayat Holdings is a Chicago-based real estate company that buys, renovates, and sells homes. We transform houses and elevate neighborhoods.",
   openGraph: {
-    title: "HAYAT HOLDINGS | We Buy. We Renovate. We Sell.",
+    title: "USHAYAT HOLDINGS | We Buy. We Renovate. We Sell.",
     description: "Chicago-based real estate company transforming houses and elevating neighborhoods.",
     url: "https://www.ushayat.com/",
   },
@@ -38,7 +38,7 @@ export default function HomePage() {
               We Buy. We Renovate.<br />We <span className="text-accent-bright italic">Sell.</span>
             </h1>
             <p className="mt-6 text-lg text-white/80 max-w-2xl">
-              Hayat Holdings is a Chicago-based real estate company with a simple mission: to transform houses and elevate neighborhoods.
+              Ushayat Holdings is a Chicago-based real estate company with a simple mission: to transform houses and elevate neighborhoods.
             </p>
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
               <Button href="/selling">Sell Your Home</Button>
@@ -73,7 +73,7 @@ export default function HomePage() {
                 <div className="w-8 h-[2px] bg-accent" />
               </div>
               <p className="text-sm text-slate">
-                Hayat Holdings is a Chicago-based real estate company with a simple mission: to <strong className="text-accent">transform</strong> houses and <strong className="text-accent">elevate</strong> neighborhoods.
+                Ushayat Holdings is a Chicago-based real estate company with a simple mission: to <strong className="text-accent">transform</strong> houses and <strong className="text-accent">elevate</strong> neighborhoods.
               </p>
             </RevealGroup>
 
@@ -153,7 +153,7 @@ export default function HomePage() {
                 <div className="w-8 h-[2px] bg-accent" />
               </div>
               <p className="text-sm text-slate">
-                At Hayat Holdings, we don&apos;t just flip houses—we create opportunities, strengthen communities, and turn real estate dreams into reality.
+                At Ushayat Holdings, we don&apos;t just flip houses—we create opportunities, strengthen communities, and turn real estate dreams into reality.
               </p>
               <p className="text-xs uppercase tracking-widest text-brand font-bold mt-6">
                 Chicago is our home.<br />Making dreams real, one home at a time.
@@ -216,7 +216,7 @@ export default function HomePage() {
             Building More Than Homes. We&apos;re Building Futures.
           </h2>
           <p className="text-lg text-slate mb-6">
-            At Hayat Holdings, we don&apos;t just flip houses — we create opportunities, strengthen communities, and turn real estate dreams into reality.
+            At Ushayat Holdings, we don&apos;t just flip houses — we create opportunities, strengthen communities, and turn real estate dreams into reality.
           </p>
           <p className="text-slate mb-8">Chicago is our home. Making dreams real, one home at a time.</p>
           <Link href="/about" className="inline-flex items-center gap-4 text-accent group">

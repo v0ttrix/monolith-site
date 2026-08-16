@@ -4,10 +4,10 @@ import { Button, Section, PageHero } from "@/components/ui";
 import RevealGroup from "@/components/RevealGroup";
 
 export const metadata: Metadata = {
-  title: "HAYAT HOLDINGS | About Us",
-  description: "Hayat Holdings is a Chicago-based real estate company that buys, renovates, and sells homes. We transform houses and elevate neighborhoods, one home at a time.",
+  title: "USHAYAT HOLDINGS | About Us",
+  description: "Ushayat Holdings is a Chicago-based real estate company that buys, renovates, and sells homes. We transform houses and elevate neighborhoods, one home at a time.",
   openGraph: {
-    title: "HAYAT HOLDINGS | About Us",
+    title: "USHAYAT HOLDINGS | About Us",
     description: "Chicago-based real estate company transforming houses and elevating neighborhoods. Learn our story.",
     url: "https://www.ushayat.com/about",
   },
@@ -34,7 +34,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Who We Are"
         title={<>Chicago-Based. Community-Focused. <span className="text-accent-bright italic">Results-Driven.</span></>}
-        subtitle="Hayat Holdings is a Chicago-based real estate company with a simple mission: to transform houses and elevate neighborhoods."
+        subtitle="Ushayat Holdings is a Chicago-based real estate company with a simple mission: to transform houses and elevate neighborhoods."
         image="/images/team.jpg"
       />
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 We started with a simple belief: every home has potential, and every neighborhood deserves investment. What began as a passion for renovating homes in Chicago has grown into a full-service real estate operation.
               </p>
               <p className="text-slate mb-6">
-                Today, Hayat Holdings buys properties directly from homeowners, renovates them with care and quality craftsmanship, and brings them back to market as beautiful, move-in-ready homes.
+                Today, Ushayat Holdings buys properties directly from homeowners, renovates them with care and quality craftsmanship, and brings them back to market as beautiful, move-in-ready homes.
               </p>
               <p className="text-slate">
                 We don&apos;t just flip houses — we create opportunities, strengthen communities, and turn real estate dreams into reality.
@@ -59,7 +59,7 @@ export default function AboutPage() {
             <RevealGroup>
               <Image
                 src="/images/office.jpg"
-                alt="Hayat Holdings office"
+                alt="Ushayat Holdings office"
                 width={800}
                 height={600}
                 className="w-full aspect-[4/3] object-cover"

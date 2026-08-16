@@ -24,7 +24,7 @@ const faqData: FAQCategory[] = [
         answer: "Send us your Chicago property address through our form or call/text us at (647) 917-8121. We ask a few quick questions about the home's condition and your timeline, then send a fair, no-obligation cash offer — usually within 24 hours. Accept it and we can close in as little as 7 days through a local real estate attorney, with no repairs, no open houses, and no commissions.",
       },
       {
-        question: "What services does Hayat Holdings provide?",
+        question: "What services does Ushayat Holdings provide?",
         answer: "We are real estate investors that help homeowners sell their properties quickly. We provide cash offers, handle paperwork, and guide you through the process for a fast, stress-free sale.",
       },
       {

@@ -59,8 +59,8 @@ export default function SellingPage() {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <input type="hidden" name="access_key" value="ff183841-0e7c-4f48-a7bc-9f4c0070b281" />
-                <input type="hidden" name="subject" value="New Property Submission, Hayat Holdings" />
-                <input type="hidden" name="from_name" value="Hayat Holdings Website" />
+                <input type="hidden" name="subject" value="New Property Submission, Ushayat Holdings" />
+                <input type="hidden" name="from_name" value="Ushayat Holdings Website" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField label="First Name" id="sellerFirstName" name="First Name" required placeholder="John" />
