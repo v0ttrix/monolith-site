@@ -58,7 +58,7 @@ export default function Footer() {
             Legal
           </h4>
           <ul className="space-y-4 text-sm text-muted">
-            <li><a href="#" className="hover:text-accent-bright transition-colors">Privacy Policy</a></li>
+            <li><a href="/privacy" className="hover:text-accent-bright transition-colors">Privacy Policy</a></li>
             <li><a href="#" className="hover:text-accent-bright transition-colors">Terms of Service</a></li>
           </ul>
           <div className="mt-12 text-xs opacity-40">&copy; 2025 Hayat Holdings. All rights reserved.</div>
