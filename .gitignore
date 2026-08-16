@@ -1,0 +1,4 @@
+node_modules/
+.next/
+out/
+tailwindcss-linux-x64
