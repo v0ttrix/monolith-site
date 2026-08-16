@@ -6,9 +6,9 @@ import RevealGroup from "@/components/RevealGroup";
 import { FormEvent } from "react";
 
 const contactInfo = [
-  { icon: "location_on", title: "Office", content: "123 Architecture Lane\nSuite 400\nNew York, NY 10001" },
-  { icon: "phone", title: "Phone", content: "+1 (555) 123-4567", href: "tel:+15551234567" },
-  { icon: "mail", title: "Email", content: "hello@ushayat.com", href: "mailto:hello@ushayat.com" },
+  { icon: "location_on", title: "Office", content: "680 S Federal Street\nSuite 400\nChicago, IL 60605" },
+  { icon: "phone", title: "Phone", content: "+1 (647) 917-8121", href: "tel:+16479178121" },
+  { icon: "mail", title: "Email", content: "deals@ushayat.com", href: "mailto:deals@ushayat.com" },
   { icon: "schedule", title: "Business Hours", content: "Monday – Friday: 9:00 AM – 6:00 PM\nSaturday: 10:00 AM – 2:00 PM\nSunday: Closed" },
 ];
 
@@ -95,7 +95,7 @@ export default function ContactsPage() {
           <div className="absolute inset-0 bg-charcoal/40 flex items-center justify-center">
             <div className="text-center">
               <span className="material-symbols-outlined text-[48px] text-white mb-4" aria-hidden="true">location_on</span>
-              <p className="text-xs uppercase tracking-widest text-white">123 Architecture Lane, New York</p>
+              <p className="text-xs uppercase tracking-widest text-white">680 S Federal Street, Chicago</p>
             </div>
           </div>
         </div>
