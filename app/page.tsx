@@ -63,9 +63,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* 01 */}
             <RevealGroup className="text-center">
-              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-6 flex items-center justify-center">
-                <span className="font-display text-sm text-accent italic">01</span>
-              </div>
+
               <h3 className="font-display text-xl font-bold text-brand uppercase tracking-wide mb-2">
                 Chicago-Based.<br />Community-Focused.<br />Results-Driven.
               </h3>
@@ -81,9 +79,7 @@ export default function HomePage() {
 
             {/* 02 */}
             <RevealGroup className="text-center reveal-delay-1">
-              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-4 flex items-center justify-center">
-                <span className="font-display text-sm text-accent italic">02</span>
-              </div>
+
               <div className="w-16 h-16 rounded-full border-2 border-charcoal mx-auto mb-4 flex items-center justify-center">
                 <span className="material-symbols-outlined text-[28px] text-charcoal" aria-hidden="true">handshake</span>
               </div>
@@ -103,9 +99,7 @@ export default function HomePage() {
 
             {/* 03 */}
             <RevealGroup className="text-center reveal-delay-2">
-              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-4 flex items-center justify-center">
-                <span className="font-display text-sm text-accent italic">03</span>
-              </div>
+
               <div className="w-16 h-16 rounded-full border-2 border-charcoal mx-auto mb-4 flex items-center justify-center">
                 <span className="material-symbols-outlined text-[28px] text-charcoal" aria-hidden="true">construction</span>
               </div>
@@ -125,9 +119,7 @@ export default function HomePage() {
 
             {/* 04 */}
             <RevealGroup className="text-center reveal-delay-3">
-              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-4 flex items-center justify-center">
-                <span className="font-display text-sm text-accent italic">04</span>
-              </div>
+
               <div className="w-16 h-16 rounded-full border-2 border-charcoal mx-auto mb-4 flex items-center justify-center">
                 <span className="material-symbols-outlined text-[28px] text-charcoal" aria-hidden="true">location_city</span>
               </div>
@@ -147,9 +139,7 @@ export default function HomePage() {
 
             {/* 05 */}
             <RevealGroup className="text-center reveal-delay-4">
-              <div className="w-12 h-12 rounded-full border-2 border-accent mx-auto mb-4 flex items-center justify-center">
-                <span className="font-display text-sm text-accent italic">05</span>
-              </div>
+
               <div className="w-16 h-16 rounded-full border-2 border-charcoal mx-auto mb-4 flex items-center justify-center">
                 <span className="material-symbols-outlined text-[28px] text-charcoal" aria-hidden="true">favorite</span>
               </div>
