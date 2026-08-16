@@ -48,30 +48,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Process */}
-      <Section className="bg-sand-light" contained={false}>
-        <div className="max-w-site mx-auto px-5 md:px-16">
-          <RevealGroup className="text-center mb-16">
-            <h2 className="font-display text-heading-lg mb-4 text-brand">How We Work</h2>
-            <p className="text-slate max-w-2xl mx-auto">
-              From buying to renovating to selling, we handle everything so you don&apos;t have to.
-            </p>
-          </RevealGroup>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 px-4 md:px-8 max-w-[1600px] mx-auto">
-          {[
-            { src: "/images/slide-chicago-skyline.jpg", alt: "Chicago skyline" },
-            { src: "/images/slide-we-buy.jpg", alt: "We buy homes" },
-            { src: "/images/slide-we-renovate.jpg", alt: "We renovate properties" },
-            { src: "/images/slide-we-sell.jpg", alt: "We sell move-in ready homes" },
-            { src: "/images/slide-building-futures.jpg", alt: "Building futures" },
-          ].map((img, i) => (
-            <RevealGroup key={img.src} className={`reveal-delay-${i + 1}`}>
-              <Image src={img.src} alt={img.alt} width={400} height={300} className="w-full rounded-sm" />
-            </RevealGroup>
-          ))}
-        </div>
-      </Section>
+
 
       {/* Before & After */}
       <Section className="bg-charcoal text-bone overflow-hidden">

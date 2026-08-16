@@ -69,28 +69,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* What We Do */}
-      <Section className="bg-sand-light" contained={false}>
-        <div className="max-w-site mx-auto px-5 md:px-16">
-          <RevealGroup className="text-center mb-16">
-            <h2 className="font-display text-heading-lg text-brand mb-4">What We Do</h2>
-            <p className="text-slate max-w-2xl mx-auto">
-              Our process is simple, transparent, and built around respect for homeowners and communities.
-            </p>
-          </RevealGroup>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 md:px-8 max-w-[1200px] mx-auto">
-          {[
-            { src: "/images/slide-we-buy.jpg", alt: "We buy homes" },
-            { src: "/images/slide-we-renovate.jpg", alt: "We renovate with quality" },
-            { src: "/images/slide-we-sell.jpg", alt: "We sell move-in ready" },
-          ].map((img, i) => (
-            <RevealGroup key={img.src} className={i > 0 ? `reveal-delay-${i}` : ""}>
-              <Image src={img.src} alt={img.alt} width={500} height={375} className="w-full rounded-sm" />
-            </RevealGroup>
-          ))}
-        </div>
-      </Section>
+
 
       {/* Values */}
       <Section>
