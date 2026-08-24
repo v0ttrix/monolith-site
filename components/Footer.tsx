@@ -61,7 +61,7 @@ export default function Footer() {
             <li><a href="/privacy" className="hover:text-accent-bright transition-colors">Privacy Policy</a></li>
             <li><a href="#" className="hover:text-accent-bright transition-colors">Terms of Service</a></li>
           </ul>
-          <div className="mt-12 text-xs opacity-40">&copy; 2025 Ushayat Holdings. All rights reserved.</div>
+          <div className="mt-12 text-xs opacity-40">&copy; 2025 Ushayat Holdings. All rights reserved. | Powered by Munitores Technologies</div>
         </div>
       </div>
     </footer>
